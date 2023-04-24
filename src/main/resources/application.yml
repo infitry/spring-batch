@@ -1,0 +1,17 @@
+logging:
+  level:
+    root: INFO
+
+spring:
+  profiles:
+    active: local
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/infitry
+    username: root
+    password:
+  batch:
+    job:
+      name: ${job.name:NONE}
+  jpa:
+    show-sql: true
