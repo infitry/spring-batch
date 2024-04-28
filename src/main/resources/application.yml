@@ -7,11 +7,18 @@ spring:
     active: local
   datasource:
     driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/infitry
+    url: jdbc:mysql://localhost:3306/batch
     username: root
     password:
   batch:
     job:
       name: ${job.name:NONE}
   jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true
     show-sql: true
+    defer-datasource-initialization: true
+    open-in-view: false
